@@ -6,7 +6,8 @@ target/
 mvnw.cmd
 mvnw
 .mvn/wrapper
-
+.mvn/
+restaurantbooking.iml
 
 ### STS ###
 .apt_generated
