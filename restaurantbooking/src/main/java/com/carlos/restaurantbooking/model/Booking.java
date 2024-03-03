@@ -4,7 +4,7 @@ public class Booking {
 
     private String customerName;
     private int tableSize;
-    private String date; // Remove
+    private String date;
 
     private int reservationStartHour;
 

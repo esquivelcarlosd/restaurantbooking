@@ -8,7 +8,6 @@ import java.util.List;
 
 public class BookingService {
 
-    // This class represents a database
     // Other classes like repository could be implemented with JDBC/JPARepository to the data persistence.
     private static final List<Booking> bookings = new ArrayList<>();
 
