@@ -3,7 +3,9 @@ package com.carlos.restaurantbooking;
 import com.carlos.restaurantbooking.controller.BookingController;
 import com.carlos.restaurantbooking.controller.WelcomeController;
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
-import io.muserver.*;
+import io.muserver.ContextHandlerBuilder;
+import io.muserver.MuServer;
+import io.muserver.MuServerBuilder;
 import io.muserver.rest.CORSConfigBuilder;
 import io.muserver.rest.RestHandlerBuilder;
 
@@ -16,6 +18,7 @@ public class RestaurantbookingApplication {
 
 
         MuServer server = MuServerBuilder.httpServer()
+                // Add more addHandler if you need
                 // Http configuration documentation at https://muserver.io/https
                 .withHttpPort(8080)
                 .addHandler(

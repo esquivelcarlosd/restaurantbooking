@@ -6,9 +6,9 @@ public class Booking {
     private int tableSize;
     private String date; // Remove
 
-    private String reservationStart;
+    private int reservationStartHour;
 
-    private String reservationEnd;
+    private int reservationEndHour;
 
     public Booking() {
 
@@ -39,20 +39,20 @@ public class Booking {
     }
 
 
-    public String getReservationStart() {
-        return reservationStart;
+    public int getReservationStartHour() {
+        return reservationStartHour;
     }
 
-    public void setReservationStart(String reservationStart) {
-        this.reservationStart = reservationStart;
+    public void setReservationStartHour(int reservationStartHour) {
+        this.reservationStartHour = reservationStartHour;
     }
 
-    public String getReservationEnd() {
-        return reservationEnd;
+    public int getReservationEndHour() {
+        return reservationEndHour;
     }
 
-    public void setReservationEnd(String reservationEnd) {
-        this.reservationEnd = reservationEnd;
+    public void setReservationEndHour(int reservationEndHour) {
+        this.reservationEndHour = reservationEndHour;
     }
 
 }
