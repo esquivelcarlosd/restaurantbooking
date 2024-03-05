@@ -32,7 +32,7 @@ public class BookingController {
         String year = String.valueOf(dateFromRequest.charAt(0)) + String.valueOf(dateFromRequest.charAt(1)) + String.valueOf(dateFromRequest.charAt(2)) + String.valueOf(dateFromRequest.charAt(3));
         String month = String.valueOf(dateFromRequest.charAt(4)) + String.valueOf(dateFromRequest.charAt(5));
         String day = String.valueOf(dateFromRequest.charAt(6)) + String.valueOf(dateFromRequest.charAt(7));
-        
+
         for (int i = 0; i < BookingService.gettAllBookingsList().size(); i++) {
             if (BookingService.gettAllBookingsList().get(i).getBookingDate().equals(year + "-" + month + "-" + day)) {
                 bookingByDate.add(BookingService.gettAllBookingsList().get(i));
@@ -64,7 +64,7 @@ public class BookingController {
             @Description("The table of the size that you want")
             @Required @FormParam("tableSize") int tableSize,
             @Description("The date that you want to reserve. It must by the following format YYYY-mm-dd")
-            @Required @FormParam("date") String date,
+            @Required @FormParam("bookingDate") String bookingDate,
             @Description("The start time of your reservation (example 10) Note: remember Your reservation lasts two hours from the start time and The reservation time must be between 13 to 22 horus")
             @Required @FormParam("reservationStart") int reservationStartHour) {
 
@@ -83,7 +83,7 @@ public class BookingController {
         Booking newBooking = new Booking();
         newBooking.setCustomerName(customerName);
         newBooking.setTableSize(tableSize);
-        //newBooking.setDate(date);
+        newBooking.setBookingDate(bookingDate);
         newBooking.setReservationStartHour(reservationStartHour);
         newBooking.setReservationEndHour(reservationStartHour + 2);
         BookingService.addNewBooking(newBooking);
