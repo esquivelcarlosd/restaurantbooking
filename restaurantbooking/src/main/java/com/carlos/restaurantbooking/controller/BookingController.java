@@ -21,9 +21,8 @@ public class BookingController {
     @GET
     @Path("/owner/booking/{dateFromRequest}")
     @Description("Existing bookings")
-    @Produces("application/stream+json")
+    @Produces("application/json")
     @ApiResponse(code = "200", message = "Success")
-    @ApiResponse(code = "422", message = "the date is not valid")
     public List<Booking> getBookingByDate(
             @Description("The booking that you want to search by date")
             @Required @PathParam("dateFromRequest") String dateFromRequest) {
@@ -46,7 +45,7 @@ public class BookingController {
     @GET
     @Path("/owner/booking/")
     @Description("Existing bookings")
-    @Produces("application/stream+json")
+    @Produces("application/json")
     @ApiResponse(code = "200", message = "Success")
     public List<Booking> getBookings() {
         return BookingService.gettAllBookingsList();
