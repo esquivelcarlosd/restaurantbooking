@@ -16,6 +16,7 @@ public class WelcomeController {
                                 
                 Endpoints:
                 -> POST /v1/customer/booking
+                -> POST /v1/customer/booking/{dateFromRequest}
                 -> GET /v1/owner/booking
                 
                 Documentation:
