@@ -15,7 +15,7 @@ public class BookingService {
         Booking bookingOne = new Booking();
         bookingOne.setCustomerName("Carlos");
         bookingOne.setTableSize(3);
-        bookingOne.setDate(LocalDate.of(2024, 3, 1).toString());
+        bookingOne.setBookingDate(LocalDate.of(2024, 3, 1).toString());
         bookingOne.setReservationStartHour(17);
         bookingOne.setReservationEndHour(19);
 
@@ -23,7 +23,7 @@ public class BookingService {
         Booking bookingTwo = new Booking();
         bookingTwo.setCustomerName("Esquivel");
         bookingTwo.setTableSize(5);
-        bookingTwo.setDate(LocalDate.of(2024, 3, 3).toString());
+        bookingTwo.setBookingDate(LocalDate.now().toString());
         bookingTwo.setReservationStartHour(16);
         bookingTwo.setReservationEndHour(18);
         bookings.add(bookingTwo);

@@ -1,10 +1,12 @@
 package com.carlos.restaurantbooking.model;
 
+import java.time.LocalDate;
+
 public class Booking {
 
     private String customerName;
     private int tableSize;
-    private String date;
+    private String bookingDate;
 
     private int reservationStartHour;
 
@@ -30,14 +32,13 @@ public class Booking {
         this.tableSize = tableSize;
     }
 
-    public String getDate() {
-        return date;
+    public String getBookingDate() {
+        return bookingDate;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setBookingDate(String bookingDate) {
+        this.bookingDate = bookingDate;
     }
-
 
     public int getReservationStartHour() {
         return reservationStartHour;
@@ -54,5 +55,4 @@ public class Booking {
     public void setReservationEndHour(int reservationEndHour) {
         this.reservationEndHour = reservationEndHour;
     }
-
 }
